@@ -3,7 +3,7 @@ import uuid
 import sys
 
 # Setup MongoDB client connections
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient('localhost', 11111)
 mag_db = client['theadvisor']
 dblp_db = client['theadvisor']
 matched_db = client['theadvisor']
