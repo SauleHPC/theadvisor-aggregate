@@ -4,14 +4,14 @@ import sys
 
 # Setup MongoDB client connections
 client = MongoClient('mongodb://localhost:27017/')
-mag_db = client['mag']
-dblp_db = client['dblp']
-matched_db = client['mag_dblp']
+mag_db = client['theadvisor']
+dblp_db = client['theadvisor']
+matched_db = client['theadvisor']
 theadvisor_db = client['theadvisor']
 
 # Access collections
-mag_collection = mag_db['papers']
-dblp_collection = dblp_db['papers']
+mag_collection = mag_db['mag']
+dblp_collection = dblp_db['dblp']
 matched_collection = matched_db['match']
 theadvisor_collection = theadvisor_db['theadvisor_papers']
 
