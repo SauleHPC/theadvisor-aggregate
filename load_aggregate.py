@@ -15,6 +15,10 @@ dblp_collection = dblp_db['dblp']
 matched_collection = matched_db['match']
 theadvisor_collection = theadvisor_db['theadvisor_papers']
 
+# Ensure indexes are created on the 'paper_id' field for mag and dblp collections
+mag_collection.create_index([("paper_id", 1)])
+dblp_collection.create_index([("paper_id", 1)])
+
 # Drop theadvisor collection to start fresh
 theadvisor_collection.drop()
 print("Cleared the 'theadvisor_papers' collection.")
@@ -69,4 +73,3 @@ print("DBLP collection count:", dblp_collection.count_documents({}))
 
 # Check if there are entries in the matched records collection
 print("Matched collection count:", matched_collection.count_documents({}))
-
